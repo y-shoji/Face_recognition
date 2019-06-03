@@ -1,11 +1,11 @@
-
-let imgElement = document.getElementById('imageSrc');
+/*
+let imgElement = document.getElementById('canvasOutput');
 let inputElement = document.getElementById('fileInput');
 inputElement.addEventListener('change', (e) => {
   imgElement.src = URL.createObjectURL(e.target.files[0]);
   }, false);
-
-imgElement.onload = function() {
+*/
+function cv_img(imgElement) {
   let input_img = cv.imread(imgElement);
   let resize_img = new cv.Mat();
   let dsize = new cv.Size(64, 64);
@@ -23,3 +23,4 @@ imgElement.onload = function() {
 function onOpenCvReady() {
   document.getElementById('status1').innerHTML = 'OpenCV.js is ready.';
 }
+

@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-#imageSrc,#canvasOutput{
+#video_area,#canvasOutput{
   width: 300px;
   height: 300px;
   border: 1px solid #000;
