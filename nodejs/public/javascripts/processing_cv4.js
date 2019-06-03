@@ -8,8 +8,8 @@ inputElement.addEventListener('change', (e) => {
 imgElement.onload = function() {
   let input_img = cv.imread(imgElement);
   let resize_img = new cv.Mat();
-  let dsize = new cv.Size(64, 48);
-  // 100x100にリサイズ
+  let dsize = new cv.Size(64, 64);
+  // 64x64にリサイズ
   cv.resize(input_img, resize_img, dsize, 0, 0, cv.INTER_AREA);
   input_img.delete();
 
