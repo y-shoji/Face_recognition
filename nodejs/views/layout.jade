@@ -9,20 +9,20 @@ html
     p#status1 OpenCV.js is loading...
     p#status2 Tensorflow.js is loading...
 
-    div
+    div#canvas1
       .inputoutput
-        img#imageSrc(alt='No Image')
+        img#imageSrc
         |     
-        .caption
-          | imageSrc 
+        .caption　入力画像 
           input#fileInput(type='file', name='file')
-      |   
+    div#canvas2
       .inputoutput
         canvas#canvasOutput
         |     
-        .caption canvasOutput
-
-    button(onClick="tf_predict();")予測開始
+        .caption 出力画像
+    div#pre_button
+      br
+      button(onClick="tf_predict();")予測開始
 
 
     script(src="/javascripts/processing_cv4.js",type='text/javascript')

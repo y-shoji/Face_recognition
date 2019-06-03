@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+#imageSrc,#canvasOutput{
+  width: 300px;
+  height: 300px;
+  border: 1px solid #000;
+}
+
+#canvas1,#canvas2{
+  float: left;
+}
+
+#pre_button{
+  clear: both;
+}
