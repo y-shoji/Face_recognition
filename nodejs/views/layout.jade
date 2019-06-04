@@ -40,7 +40,7 @@ html
       const $video = document.getElementById('video_area');  // 映像表示エリア
       // 「スタートボタン」を押下したら、getUserMedia を使って映像を「映像表示エリア」に表示してね。
       $start.addEventListener('click', () => {
-      navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+      navigator.mediaDevices.getUserMedia({ video: {width:320,height:320}, audio: false })
       .then(stream => $video.srcObject = stream)
       .catch(err => alert(`${err.name} ${err.message}`));
       }, false);

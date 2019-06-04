@@ -2,7 +2,7 @@ function OnTensorflowReady(){
 	document.getElementById('status2').innerHTML = 'Tensorflow.js is ready.';
   }
 
-	const CLASSES = {0:'小倉唯', 1:'水瀬いのり', 2:'上坂すみれ',3:"内田真礼"};
+	const CLASSES = {0:'橋本', 1:'井上', 2:'祝園',3:'梶岡',4:'かねとう',5:'仮屋',6:'庄司',7:'園',8:'鈴木'};
   async function tf_predict(){
 	 const model = await tf.loadLayersModel('/model/model.json');
 
@@ -22,5 +22,10 @@ function OnTensorflowReady(){
 		document.getElementById('result2').innerHTML =(CLASSES[0]+":"+logits[0].toFixed(4)*100+"%<br>"+
 																				 CLASSES[1]+":"+logits[1].toFixed(4)*100+"%<br>"+
 																				 CLASSES[2]+":"+logits[2].toFixed(4)*100+"%<br>"+
-																				 CLASSES[3]+":"+logits[3].toFixed(4)*100+"%<br>");
+																				 CLASSES[3]+":"+logits[3].toFixed(4)*100+"%<br>"+
+																				 CLASSES[4]+":"+logits[4].toFixed(4)*100+"%<br>"+
+																				 CLASSES[5]+":"+logits[5].toFixed(4)*100+"%<br>"+
+																				 CLASSES[6]+":"+logits[6].toFixed(4)*100+"%<br>"+
+																				 CLASSES[7]+":"+logits[7].toFixed(4)*100+"%<br>"+
+																				 CLASSES[8]+":"+logits[8].toFixed(4)*100+"%<br>");
 };
