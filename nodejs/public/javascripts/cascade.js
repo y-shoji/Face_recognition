@@ -1,3 +1,5 @@
+//opencvカスケードによる切り出しを試みたが、うまくいかなかったためこのコードは使わない
+
 let imgElement = document.getElementById('imageSrc');
 let inputElement = document.getElementById('fileInput');
 inputElement.addEventListener('change', (e) => {
